@@ -1,0 +1,44 @@
+{
+  "name": "multiget",
+  "version": "1.0.0",
+  "description": "retrieves files from the designated filesource in multiple parts",
+  "main": "./lib/index.js",
+  "bin": {
+    "multiget": "./lib/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "sudo npm i -g && multiget http://f3c046aa.bwtest-aws.pravala.com/384MB.jar",
+    "refresh": "rm -rf ./node_modules./package-lock.json && npm i"
+  },
+  "keywords": [
+    "multiget"
+  ],
+  "author": "Nicolas Polhamus",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.50",
+    "@types/axios": "^0.14.0",
+    "@types/bluebird": "^3.5.25",
+    "@types/node": "^10.12.14",
+    "@types/request": "^2.48.1",
+    "@types/request-promise-native": "^1.0.15",
+    "nodemon": "^1.18.8",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
