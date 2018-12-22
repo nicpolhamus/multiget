@@ -79,7 +79,7 @@ function downloadInParallel(url: string): void {
   /* catch any error from the requests or file writing */
   .catch((error: Error) => {
     /* logging the error out to the console for now */
-    console.log(`Error encountered during`);
+    console.log(`Error encountered during parallel file download!`);
   });
 }
 
@@ -152,7 +152,7 @@ function downloadChunks(url: string): void {
     console.log('Done downloading file!');
   })
   .catch((error: Error) => {
-    /* error log here is for dev only */
+    /* log the error */
     console.log(`Error encountered during sequential file download!`);
   });
 }
